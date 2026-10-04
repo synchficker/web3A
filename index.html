@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d0a05">
 <title>3A Billiard & Lounge</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +12,17 @@
 </head>
 <body>
 <nav><div class="wrap">
-  <!-- LOGO NAV: images/logo.png (emas #c8a501 solid) -->
+  <!-- LOGO NAV: images/logo.png. UKURAN: 384 x 384 px (1:1), PNG transparan. Tampil 46x46 px (38x38 px di HP) -->
   <a class="logo" href="#top"><img src="images/logo.png" alt="Logo 3A Billiard Lounge" width="46" height="46"><span>Billiard Lounge</span></a>
-  <ul><!--<li><a href="#about">VIP LOUNGE</a></li>--><li><a href="index.html">HOME</a></li><li><a href="#galeri">EVENT</a></li><li><a href="#menu">MENU</a></li><li><a href="#promo">PROMO</a></li><li><a href="#harga">PRICE</a></li><li><a href="#testimoni">REVIEWS</a></li><li><a href="#lokasi">FIND US</a></li></ul>
-  <a class="btn solid" href="https://wa.me/6281200000000?text=Halo%20Neon%20Cue%2C%20saya%20mau%20booking%20meja" target="_blank" rel="noopener" style="padding:9px 20px">CONTACT US</a>
+  <ul id="menu-nav"><!--<li><a href="#about">VIP LOUNGE</a></li>--><li><a href="#fasilitas">FASILITAS</a></li><li><a href="#galeri">EVENT</a></li><li><a href="#menu">MENU</a></li><li><a href="#promo">PROMO</a></li><li><a href="#harga">PRICE</a></li><li><a href="#testimoni">REVIEWS</a></li><li><a href="#lokasi">FIND US</a></li><li class="nav-cta-li"><a class="btn solid" href="https://wa.me/6281200000000?text=Halo%20Neon%20Cue%2C%20saya%20mau%20booking%20meja" target="_blank" rel="noopener">CONTACT US</a></li></ul>
+  <a class="btn solid nav-cta" href="https://wa.me/6281200000000?text=Halo%20Neon%20Cue%2C%20saya%20mau%20booking%20meja" target="_blank" rel="noopener" style="padding:9px 20px">CONTACT US</a>
+  <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-nav"><span></span><span></span><span></span></button>
 </div></nav>
 
 <header class="hero" id="top">
   <canvas id="felt" aria-hidden="true"></canvas>
   <div class="wrap">
+    <!-- LOGO HERO: images/logo-hero.png. UKURAN: 800 x 800 px (1:1; minimal 640x640), PNG transparan. Tampil maks 420 px (220 px di HP) -->
     <img class="hero-logo" src="images/logo-hero.png" alt="Logo 3A Billiard Lounge" width="170" height="170" fetchpriority="high">
     <h1><span><i>Rack</i></span><span><i>Em Up</i></span><span><i> and Fun</i></span></h1>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966.</p>
@@ -45,32 +48,37 @@
 </section>
 
 <section id="about"><div class="wrap two">
-  <!-- Ganti src gambar dengan foto asli klub Anda -->
-  <figure class="about-img rv"><img src="https://picsum.photos/seed/neoncue-about/800/1000" alt="Suasana Neon Cue Billiard Club" width="800" height="1000" loading="lazy"></figure>
+  <!-- UKURAN GAMBAR "OUR STORY": 960 x 1200 px (rasio 4:5, potret). Tampil +-440x550 px di desktop. Format JPG/WebP, maks 250 KB -->
+  <figure class="about-img rv"><img src="https://picsum.photos/seed/neoncue-about/960/1200" alt="Suasana Neon Cue Billiard Club" width="960" height="1200" loading="lazy"></figure>
   <div class="about-txt rv"><h2>Our Story</h2><p>Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.</p>
   <ul class="tick"><li>Lorem Ipsum</li><li>Dolor Sit</li><li>Amet Ipsum</li></ul></div>
-</div><!-- Ganti src gambar dengan foto asli fasilitas klub Anda (rasio 4:3) -->
+</div>
   <div class="wrap two fas-row flip" id="fasilitas">
-    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-lounge/800/600" alt="Exclusive Lounge Neon Cue" width="800" height="600" loading="lazy"></figure>
-    <div class="about-txt fas-txt rv"><h3>Exclusive Lounge</h3><p>Kenyamanan, privasi, dan kualitas permainan terbaik dalam satu tempat.</p></div>
+    <!-- UKURAN GAMBAR "EXCLUSIVE LOUNGE": 1200 x 900 px (rasio 4:3, lanskap). Tampil +-640x480 px di desktop. JPG/WebP, maks 250 KB -->
+    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-lounge/1200/900" alt="Exclusive Lounge Neon Cue" width="1200" height="900" loading="lazy"></figure>
+    <div class="about-txt fas-txt rv"><h3>Exclusive Lounge</h3><p>Area santai eksklusif dengan suasana nyaman untuk bersantai dan bersosialisasi bersama teman.</p></div>
   </div>
   <div class="wrap two fas-row">
-    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-vip/800/600" alt="VIP Room Neon Cue" width="800" height="600" loading="lazy"></figure>
-    <div class="about-txt fas-txt rv"><h3>VIP Room</h3><p>Area santai eksklusif dengan suasana nyaman untuk bersantai dan bersosialisasi bersama teman.</p></div>
+    <!-- UKURAN GAMBAR "VIP ROOM": 1200 x 900 px (rasio 4:3, lanskap). Tampil +-640x480 px di desktop. JPG/WebP, maks 250 KB -->
+    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-vip/1200/900" alt="VIP Room Neon Cue" width="1200" height="900" loading="lazy"></figure>
+    <div class="about-txt fas-txt rv"><h3>VIP Room</h3><p>Ruang privat bernuansa mewah untuk bermain lebih tenang, cocok untuk acara dan pertemuan spesial.</p></div>
   </div>
   <div class="wrap two fas-row flip">
-    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-rasson/800/600" alt="Meja dan peralatan billiard RASSON" width="800" height="600" loading="lazy"></figure>
-    <div class="about-txt fas-txt rv"><h3>Peralatan Standar Internasional RASSON</h3><p>Ruang privat bernuansa mewah untuk bermain lebih tenang, cocok untuk acara dan pertemuan spesial.</p></div>
+    <!-- UKURAN GAMBAR "PERALATAN RASSON": 1200 x 900 px (rasio 4:3, lanskap). Tampil +-640x480 px di desktop. JPG/WebP, maks 250 KB -->
+    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-rasson/1200/900" alt="Meja dan peralatan billiard RASSON" width="1200" height="900" loading="lazy"></figure>
+    <div class="about-txt fas-txt rv"><h3>Peralatan Standar Internasional RASSON</h3><p>Meja dan perlengkapan billiard RASSON berstandar internasional untuk permainan presisi.</p></div>
   </div>
   <div class="wrap two fas-row">
-    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-service/800/600" alt="Pelayanan staf Neon Cue" width="800" height="600" loading="lazy"></figure>
-    <div class="about-txt fas-txt rv"><h3>Pelayanan Terbaik</h3><p>Meja dan perlengkapan billiard RASSON berstandar internasional untuk permainan presisi.</p></div>
+    <!-- UKURAN GAMBAR "PELAYANAN TERBAIK": 1200 x 900 px (rasio 4:3, lanskap). Tampil +-640x480 px di desktop. JPG/WebP, maks 250 KB -->
+    <figure class="about-img fas-img rv"><img src="https://picsum.photos/seed/neoncue-service/1200/900" alt="Pelayanan staf Neon Cue" width="1200" height="900" loading="lazy"></figure>
+    <div class="about-txt fas-txt rv"><h3>Pelayanan Terbaik</h3><p>Tim ramah dan sigap siap membantu agar setiap kunjungan Anda berkesan.</p></div>
   </div>
 </section>
 <section id="galeri" class="alt"><div class="wrap">
   <div class="head rv"><h2>Event</h2><p>Ganti gambar ini dengan foto asli klub Anda (rasio 4:3).</p></div>
   <div class="slider rv" role="region" aria-roledescription="carousel" aria-label="Galeri Neon Cue">
     <button class="sl-btn prev" type="button" aria-label="Gambar sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <!-- UKURAN GAMBAR EVENT (6 foto): 800 x 600 px (rasio 4:3, lanskap). Tampil +-370x277 px di desktop. JPG/WebP, maks 150 KB per foto -->
     <div class="track" tabindex="0">
       <figure class="slide"><img src="https://picsum.photos/seed/neoncue-g1/800/600" alt="Area utama" width="800" height="600" loading="lazy"><figcaption>Area utama</figcaption></figure>
       <figure class="slide"><img src="https://picsum.photos/seed/neoncue-g2/800/600" alt="Turnamen" width="800" height="600" loading="lazy"><figcaption>Turnamen</figcaption></figure>
@@ -95,7 +103,7 @@
 			</div>
 		</div>
 		
-		<!-- Gambar menu rasio 1:1 (contoh 400x400). Ganti src dengan foto menu asli -->
+		<!-- UKURAN GAMBAR MENU (semua item): 400 x 400 px (rasio 1:1, persegi). Tampil 96x96 px (84x84 px di HP). JPG/WebP, maks 60 KB. Objek utama di tengah -->
 		<div class="menu">
 			<div class="mi" data-c="makanan"><span class="badge best">Best Seller</span>
 				<img src="images/menu/nasi-goreng-aaa.svg" alt="Nasi Goreng AAA" width="400" height="400" loading="lazy">

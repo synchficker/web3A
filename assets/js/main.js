@@ -51,3 +51,15 @@ document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){docum
     update();
   });
 })();
+
+// Menu mobile (hamburger)
+(function(){
+  var nav=document.querySelector('nav'),btn=nav.querySelector('.nav-toggle');
+  if(!btn)return;
+  function set(o){nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Tutup menu':'Buka menu')}
+  btn.addEventListener('click',function(){set(!nav.classList.contains('open'))});
+  nav.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target))set(false)});
+  addEventListener('resize',function(){if(innerWidth>1000)set(false)});
+})();
