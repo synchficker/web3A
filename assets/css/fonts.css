@@ -1,7 +1,0 @@
-/* Font futuristik:
-   - Orbitron      : judul/display (heading, logo, angka, harga)
-   - Exo 2         : teks isi/body (mudah dibaca, nuansa techno)
-   - Share Tech Mono: badge, tab, angka bola (mono)
-   Semua dimuat dari Google Fonts, dengan fallback font sistem bila gagal dimuat.
-   Untuk self-host: unduh .woff2 ke assets/fonts/ lalu ganti @import dengan @font-face. */
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Exo+2:wght@400;500;600;700&family=Share+Tech+Mono&display=swap");
